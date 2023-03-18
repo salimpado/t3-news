@@ -1,0 +1,62 @@
+@startuml
+
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+!define primary_key(x) <u>x</u>
+!define unique(x) <color:royalblue><b>x</b></color>
+!define optional(x) <i>x</i>
+
+Table(user, "User") {
+    primary_key(id) : String
+    name : String
+    optional(email) : String
+    optional(emailVerified) : DateTime
+    optional(image) : String
+}
+
+Table(verificationToken, "VerificationToken") {
+    identifier : String
+    unique(token) : String
+    expires : DateTime
+}
+
+Table(account, "Account") {
+    primary_key(id) : String
+    providerType : String
+    providerId : String
+    user : User
+}
+
+Table(session, "Session") {
+    primary_key(id) : String
+    userId : String
+    expires : DateTime
+}
+
+Table(article, "Article") {
+    primary_key(id) : String
+    title : String
+    content : String
+    imageUrl : String
+    publishedAt : DateTime
+    author : User
+}
+
+Table(category, "Category") {
+    primary_key(id) : String
+    name : String
+}
+
+Table(article_category, "Article_Category") {
+    primary_key(id) : String
+    articleId : String
+    categoryId : String
+}
+
+user "1" -- "0..*" account : accounts
+user "1" -- "0..*" session : sessions
+user "1" -- "0..*" article : author
+category "1" -- "0..*" article_category : categories
+article "1" -- "0..*" article_category : articles
+article_category "0..1" -- "0..1" category : categoryId
+article_category "0..1" -- "0..1" article : articleId
+@enduml
