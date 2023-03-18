@@ -1,28 +1,19 @@
-# Create T3 App
+# t3-news
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+t3-news is a news web application developed using the T3 Stack (https://create.t3.gg/). The goal of this application is to provide a responsive, efficient, and user-friendly news platform by leveraging the modern technologies available in the T3 Stack.
 
-## What's next? How do I make an app with this?
+## The T3 Stack includes:
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+TypeScript: A programming language that extends JavaScript by adding features such as static typing, making the development and maintenance of large-scale applications easier.
+Tailwind CSS: A CSS framework that enables rapid and easy development of responsive designs using utility-first CSS.
+Three.js: A 3D library that allows applications to display 3D graphics content within a browser using WebGL.
+Key features of the t3-news application include:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Responsive news display, making it easy for readers to navigate and read news on any device.
+News filtering and searching based on categories, keywords, and publication dates.
+User account integration for managing subscriptions, saving favorite articles, and following specific topics or authors.
+Admin interface for managing articles, categories, and users.
+Support for sharing articles via social media and email.
+To get started with t3-news, follow the installation and configuration instructions available in this repository's documentation. If you have any questions or encounter issues, feel free to create an issue in this repository or contact the development team.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Enjoy, and we hope t3-news becomes the news solution you've been looking for!
