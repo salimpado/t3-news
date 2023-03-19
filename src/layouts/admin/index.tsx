@@ -1,24 +1,26 @@
 // components/AdminLayout.tsx
 
-import React from 'react';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import Footer from './Footer';
+import { type ReactNode } from "react";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface AdminLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Header />
-      <div className="flex-grow flex">
+      <div className="flex ">
         <Sidebar />
-        <main className="bg-gray-100 p-4 w-full">{children}</main>
+        <main className="flex flex-grow flex-col bg-gray-100 p-4">
+          {children}
+        </main>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

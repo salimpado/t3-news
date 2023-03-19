@@ -8,9 +8,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <div
-      className={`h-full bg-indigo-700 text-white ${
+      className={` bg-indigo-700 text-white ${
         isCompact ? "w-20" : "w-64"
-      } transition-all duration-300`}
+      } flex flex-col transition-all duration-300`}
     >
       <button
         className="block w-full bg-indigo-800 p-4 text-center text-xl font-bold"
@@ -18,8 +18,8 @@ const Sidebar: React.FC = () => {
       >
         {isCompact ? ">" : "<"}
       </button>
-      <nav className="space-y-2">
-      <Link
+      <nav className="flex-1 space-y-2">
+        <Link
           href="/admin"
           className="block p-4 font-semibold hover:bg-indigo-600"
         >
