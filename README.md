@@ -4,10 +4,11 @@ t3-news is a news web application developed using the T3 Stack (https://create.t
 
 ## The T3 Stack includes:
 
-TypeScript: A programming language that extends JavaScript by adding features such as static typing, making the development and maintenance of large-scale applications easier.
-Tailwind CSS: A CSS framework that enables rapid and easy development of responsive designs using utility-first CSS.
-Three.js: A 3D library that allows applications to display 3D graphics content within a browser using WebGL.
-Key features of the t3-news application include:
+- TypeScript: A programming language that extends JavaScript by adding features such as static typing, making the development and maintenance of large-scale applications easier.
+- Tailwind CSS: A CSS framework that enables rapid and easy development of responsive designs using utility-first CSS.
+- Three.js: A 3D library that allows applications to display 3D graphics content within a browser using WebGL.
+
+## Key features of the t3-news application include:
 
 Responsive news display, making it easy for readers to navigate and read news on any device.
 News filtering and searching based on categories, keywords, and publication dates.
