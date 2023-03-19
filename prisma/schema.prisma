@@ -55,6 +55,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    articles      Article[]
 }
 
 model VerificationToken {
@@ -63,4 +64,29 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Article {
+    id          String             @id @default(cuid())
+    title       String
+    content     String
+    imageUrl    String
+    publishedAt DateTime
+    author      User               @relation(fields: [authorId], references: [id])
+    authorId    String
+    categories  Article_Category[]
+}
+
+model Category {
+    id       String             @id @default(cuid())
+    name     String
+    articles Article_Category[]
+}
+
+model Article_Category {
+    id         String   @id @default(cuid())
+    article    Article  @relation(fields: [articleId], references: [id])
+    articleId  String
+    category   Category @relation(fields: [categoryId], references: [id])
+    categoryId String
 }
