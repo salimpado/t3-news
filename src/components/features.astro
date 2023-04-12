@@ -1,0 +1,72 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Custom Web Design",
+    description:
+      "We create unique and visually appealing websites that cater to your brand and business needs. Our designs are responsive, user-friendly, and optimized for all devices.",
+    icon: "bx:bxs-paint",
+  },
+
+  {
+    title: "Web Application Development",
+    description:
+      "We develop web applications that streamline your business processes, increase efficiency, and enhance user experience. We use the latest technologies and frameworks to ensure your web app is reliable, scalable, and secure.",
+    icon: "fa-solid:globe",
+  },
+
+  {
+    title: "E-commerce Solutions",
+    description:
+      "We build e-commerce websites that enable you to sell your products or services online. Our solutions include payment gateway integration, shopping cart functionality, and inventory management.",
+    icon: "ph:shopping-cart-fill",
+  },
+
+  {
+    title: "Content Management Systems",
+    description:
+      "We develop custom content management systems that allow you to manage your website content with ease. Our CMS solutions are flexible, intuitive, and tailored to your specific business requirements.",
+    icon: "mdi:gear-play",
+  },
+  {
+    title: "Search Engine Optimization",
+    description:
+      "We optimize your website for search engines to increase your online visibility and attract more traffic. Our SEO services include keyword research, on-page optimization, and link building.",
+    icon: "fa-solid:search-dollar",
+  },
+
+  {
+    title: "Website Maintenance and Support",
+    description:
+      "We provide ongoing website maintenance and support services to ensure your website runs smoothly and remains up-to-date. Our services include website updates, security patches, and technical support.",
+    icon: "fa-solid:headset",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Let's Build Your Dream Website with Digikuy
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Bring your website vision to life with Digikuy's all-inclusive, state-of-the-art tools and innovative solutions that make your website stand out from the rest.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2  w-10 h-10 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
